@@ -1,4 +1,6 @@
-<?php
+<?php if (session_status() == PHP_SESSION_NONE) {
+  session_start();
+} 
 // Connexion à la base de données
 if (file_exists("connexion-plesk.php")) {
     include("connexion-plesk.php");
