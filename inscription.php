@@ -1,11 +1,10 @@
 <?php
 // Connexion à la base de données
-if (file_exists("connexion-plesk.php")){
+if (file_exists("connexion-plesk.php")) {
     include("connexion-plesk.php");
-    $mysqli = new mysqli($server, $username,$password , $database);
-}
-    else
-        $mysqli = new mysqli("localhost", "root", "", "moduleconnexion");
+    $mysqli = new mysqli($server, $username, $password, $database);
+} else
+    $mysqli = new mysqli("localhost", "root", "", "moduleconnexion");
 
 if ($mysqli->connect_error) {
     die("Erreur de connexion : " . $mysqli->connect_error);
@@ -49,13 +48,15 @@ $mysqli->close();
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <title>Inscription</title>
 </head>
+
 <body>
     <h2>Formulaire d'inscription</h2>
-    <form method="POST" action="">
+    <form method="POST" action="inscription.php">
         <label>Login :</label><br>
         <input type="text" name="login" required><br><br>
 
@@ -76,4 +77,5 @@ $mysqli->close();
 
     <p style="color:red;"><?php echo $message; ?></p>
 </body>
+
 </html>
