@@ -1,7 +1,7 @@
 <?php
 if (session_status() == PHP_SESSION_NONE) {
-  session_start();
-} 
+    session_start();
+}
 
 // Redirection si l'utilisateur n'est pas connecté
 if (!isset($_SESSION['id'])) {
@@ -62,6 +62,7 @@ $mysqli->close();
 <head>
     <meta charset="UTF-8">
     <title>Modifier le profil</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>

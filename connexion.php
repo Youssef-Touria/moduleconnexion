@@ -1,7 +1,7 @@
 <?php
 if (session_status() == PHP_SESSION_NONE) {
-  session_start();
-} 
+    session_start();
+}
 
 // Connexion à la base de données
 // Connexion à la base de données
@@ -63,16 +63,17 @@ $mysqli->close();
 <head>
     <meta charset="UTF-8">
     <title>Connexion</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-     <nav>
-    <a href="index.php">Accueil</a>
-    <a href="inscription.php">S’inscrire</a>
-    <a href="connexion.php">Se connecter</a>
-    <?php if (isset($_SESSION['login']))
-      echo '<a href="deconnexion.php">Se deconnecter</a>'; ?>
-  </nav>
+    <nav>
+        <a href="index.php">Accueil</a>
+        <a href="inscription.php">S’inscrire</a>
+        <a href="connexion.php">Se connecter</a>
+        <?php if (isset($_SESSION['login']))
+            echo '<a href="deconnexion.php">Se deconnecter</a>'; ?>
+    </nav>
     <h2>Connexion</h2>
     <form method="POST" action="connexion.php">
         <label>Login :</label><br>

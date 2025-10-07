@@ -1,22 +1,90 @@
-/* Base */
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-  max-width:760px;margin:40px auto;padding:0 16px;color:#222;background:#fff;
+/* --- Base générale --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
 }
 
-/* Nav */
-nav{margin:12px 0 20px}
-nav a{margin-right:12px;text-decoration:none;color:#1f2937}
-nav a:hover{text-decoration:underline}
-nav .who{font-weight:700;margin-right:8px}
+/* --- Titres --- */
+h1, h2 {
+    color: #0077cc;
+    text-align: center;
+}
 
-/* Cartes & messages */
-.card{border:1px solid #ddd;border-radius:12px;padding:16px;margin:16px 0;background:#fff}
-.ok{background:#e8fff0;border:1px solid #bde5c8;padding:12px;border-radius:8px}
-.err{background:#ffeceb;border:1px solid #f3b6b2;padding:12px;border-radius:8px}
+/* --- Liens --- */
+a {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-/* Liens utilitaires */
-.link{color:#0d6efd;text-decoration:none}
-.link:hover{text-decoration:underline}
+a:hover {
+    text-decoration: underline;
+}
+
+/* --- Formulaires --- */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #005fa3;
+}
+
+/* --- Table admin.php --- */
+table.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.styled-table thead {
+    background-color: #0077cc;
+    color: white;
+}
+
+/* --- Messages --- */
+.error {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+}
+
+.success {
+    color: green;
+    text-align: center;
+    font-weight: bold;
+}

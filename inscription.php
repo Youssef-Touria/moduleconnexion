@@ -54,6 +54,7 @@ $mysqli->close();
 <head>
     <meta charset="UTF-8">
     <title>Inscription</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
